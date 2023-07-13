@@ -1,0 +1,17 @@
+main-div{
+    width: 100vw;
+    height: 100vh;
+}
+.contact{
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(184, 181, 181);
+    text-align: center;
+}
+.icon{
+    width: 5rem;
+    height: 5rem;
+    //background-color: rgb(238, 231, 231);
+    clip-path: circle(48.9% at 50% 50%);
+    background: grid;
+}

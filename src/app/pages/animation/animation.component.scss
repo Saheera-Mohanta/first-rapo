@@ -1,0 +1,142 @@
+.bgimg{
+    width: 100vw;
+    height: calc(100vh - 110px);
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    
+}
+
+.text{
+    width: 60rem;
+    height: 10rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    font-weight: bolder;
+    position: fixed;
+    text-align: center;
+    opacity: 0.3;
+
+
+ }
+
+
+.center-div{
+    width: 50rem;
+    height: 25rem;
+    //background-color: rgb(248, 119, 34);
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    position: relative;
+    animation-name: center-div;
+    animation-name:main-div;
+    animation-duration: 2s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    
+
+}
+ @keyframes center-div{
+   0%{
+        transform: scale(0,0);
+        
+    }
+    20%{
+        transform: scale(1,1);
+    }
+    30%{
+        transform: scale(1.1,1.1);
+    }
+
+    
+ }
+
+ .main-div{
+    width: 42rem;
+    height: 20rem;
+    display:flex ;
+    background-color: transparent;
+    justify-content: center;
+    place-items: center;
+    position: relative;
+    z-index: 1;
+    animation-name:main-div;
+    animation-duration: 2s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        //background-image: url("im.jpeg");
+        background-color: rgb(236, 111, 39);
+        position: absolute;
+        z-index: -1;
+        opacity: 0.5;
+    
+        
+
+
+    }
+}
+
+
+
+@keyframes main-div{
+    0%{
+        transform: scale(0,0);
+    }
+    20%{
+        transform: scale(1,1);
+    }
+    30%{
+        transform: scale(1.1,1.1);
+    }
+
+     
+  }
+
+  
+.waviy {
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    //padding-top: 30px;
+    font-weight: bold;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 3s ease-in-out infinite  running;
+    animation-delay: calc(.2s * var(--i));
+    animation-direction: alternate;
+  }
+  @keyframes flip {
+    0%{
+        transform: rotateX(0);
+        transform-origin: bottom;
+    }
+    50%{
+        
+        transform:rotateX(180deg);
+        transform-origin: bottom;
+    }
+    100%{
+        transform:rotateX(0deg);
+        transform-origin: bottom;
+        
+    }
+
+  }
