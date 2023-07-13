@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicjsComponent } from './basicjs.component';
+import { BasictsComponent } from './basicts.component';
 
-describe('BasicjsComponent', () => {
-  let component: BasicjsComponent;
-  let fixture: ComponentFixture<BasicjsComponent>;
+describe('BasictsComponent', () => {
+  let component: BasictsComponent;
+  let fixture: ComponentFixture<BasictsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BasicjsComponent]
+      declarations: [BasictsComponent]
     });
-    fixture = TestBed.createComponent(BasicjsComponent);
+    fixture = TestBed.createComponent(BasictsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

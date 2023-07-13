@@ -1,0 +1,9 @@
+
+<div>{{ email}}</div>
+
+<div *ngIf="name">name is true</div>
+<div class="normal-class">normal-class</div>
+<div class="row {{email}}">variable class</div>
+
+<div class="col {{name ? 'calss_true':'class_false'}}">class binding</div>
+<div [class]="'row2'+email">data bind</div>
