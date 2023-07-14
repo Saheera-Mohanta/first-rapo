@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  color="red";
+  text='red'
+
+  public updateColor(){
+    this.color="blue"
+    this.text='blue'
+
+  }
 }

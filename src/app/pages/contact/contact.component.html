@@ -1,35 +1,4 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<section class="main-div">
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>bsu hfeirhfuw hwbibf</p>
-    </div>
-    <div class="container">
-        <div class="contactInfo">
-            <div class="box">
-                <div class="icon"><i class="fa-solid fa-location-dot fa-beat"></i></div>
-                <div class="text">
-                    <h3>Address</h3>
-                    <p>Sridungri adityapur<br>near kalimandir</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icon"></div>
-                <div class="text">
-                    <h3>Phone no.</h3>
-                    <p>7770384499</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icon"></div>
-                <div class="text">
-                    <h3>Email</h3>
-                    <p>mohsntasaheera099@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<h1 [style.color]="color">{{ text}}</h1>-->
+<div [style]="'color:' + color + ';'">{{ text }}</div>
+<button (click)="updateColor()">update</button>

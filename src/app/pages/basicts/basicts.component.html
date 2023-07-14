@@ -1,5 +1,5 @@
 
-<div>{{ email}}</div>
+<!--<div>{{ email}}</div>
 
 <div *ngIf="name">name is true</div>
 <div class="normal-class">normal-class</div>
@@ -7,3 +7,12 @@
 
 <div class="col {{name ? 'calss_true':'class_false'}}">class binding</div>
 <div [class]="'row2'+email">data bind</div>
+
+<button (click)="valueChange()">Click</button>-->
+
+
+    <div class="main-div">
+    <div class="box" [style]="'color:'+ color +';background-color:'+ bgColor +';'">{{ text}}</div>
+     <button (click)="updateColor()">update color</button>
+    </div>
+    
