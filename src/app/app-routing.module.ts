@@ -9,6 +9,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { Login1Component } from './pages/login1/login1.component';
 import { AnimationComponent } from './pages/animation/animation.component';
 import { BasictsComponent } from './pages/basicts/basicts.component';
+import { IfelseComponent } from './pages/ifelse/ifelse.component';
+import { NgstyleComponent } from './pages/ngstyle/ngstyle.component';
+import { FormComponent } from './pages/form/form.component';
 
 const routes: Routes = [
   {
@@ -34,8 +37,18 @@ const routes: Routes = [
   },
   {
     path:'animation',component:AnimationComponent
-  },{
+  },
+  {
     path:'basicts',component:BasictsComponent
+  },
+  {
+    path:'ifelse',component:IfelseComponent
+  }
+  ,{
+    path:'ngstyle',component:NgstyleComponent
+  },
+  {
+    path:'form',component:FormComponent
   }
     
 ];

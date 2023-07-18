@@ -1,0 +1,48 @@
+<!-- <h2>ng style </h2>
+<ul *ngFor="let person of people">
+    <li [ngStyle]="{'color':getColor(person.country)}">
+         {{ person.name }} ({{ person.country }}) 
+    </li>
+  </ul> -->
+
+  <h2>using ngclassv as string</h2>
+  <p [ngClass]="[' one ',' two']">using ng class with sring example</p>
+  <div *ngFor="let user of users"[ngClass]="'three four'">
+    {{ user }}
+  </div>
+
+  <p [ngClass]="{'one':true, 'three': false}">Example using ng class  objet</p>
+  <div [ngClass]="getcssclass('mode')">
+    example using ngclass with component method
+  </div>
+
+
+  <!-- interpolution -->
+   <h2>Interpolution</h2>
+  <h4>Employee name: {{empfirstname+' '+emplastname}}</h4>
+  <h4>Employee age: {{a+b}}</h4>
+
+  <!-- property binding -->
+   <h2>property binding</h2>
+  <span [innerHTML]='title'></span>
+  first name:<span [innerHTML]='firstname'></span>
+  <img [src]="'images.jpg'" [height]="200">
+
+
+  <!-- attribute binding -->
+  <h2>attribute binding</h2>
+  <table>
+    <tr>
+        <td>Student Details</td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>roll</td>
+        <td>course</td>
+    </tr>
+    <tr>
+        <td>saheera</td>
+        <td>04</td>
+        <td>MCA</td>
+    </tr>
+  </table>

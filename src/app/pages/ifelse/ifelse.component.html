@@ -1,0 +1,71 @@
+<!-- <h1>using Ngif</h1>
+<input type="radio" name="radio1" (click)="changevalue(true)">True
+<input type="radio" name="radio1" (click)="changevalue(false)">false
+<div *ngIf="isvalid">
+    This is valid data
+</div>
+<div *ngIf="!isvalid">
+    This is not valid data
+</div> -->
+
+<!-- <h2>using *ngIf with elseblock</h2>
+<input type="radio" name="radio1" (click)="changevalue(true)">True
+<input type="radio" neme="radio1" (click)="changevalue(false)">False
+<div *ngIf="isvalid ; else elseblock">
+    This is valid data
+</div>
+<ng-template #elseblock>
+    <div>
+        This is not valid data
+    </div>
+</ng-template> -->
+
+
+<!-- <h2>using *ngIf with else and then</h2>
+<input type="radio" name="radio1" (click)="changevalue(true)">True
+<input type="radio" name="radio1" (click)="changevalue(false)">false
+<div *ngIf="isvalid then thenblock ; else elseblock"></div>
+    <ng-template #thenblock >
+   <div> This is valid data</div>
+    </ng-template>
+   <ng-template #elseblock>
+<div >
+    This is not valid data
+</div> 
+</ng-template>
+ -->
+
+ <!-- <h2>using *ngf for</h2>
+ <ul>
+    <li *ngFor="let Student of Students ; let i=index ; let f=first ; let l=last ; let ev=even ; let od=odd">
+    {{i+1}} - {{Student.name}} - {{f}} - {{l}} - {{ev}} - {{od}}
+
+    </li>
+ </ul> -->
+
+ <!-- <h2>track by ngfor</h2>
+ <table border="1">
+ <tr *ngFor="let s of student; let i=index; trackBy:trackbystudentid">
+    <td>{{i+1}}</td>
+    <td>{{s.studentid}}</td>
+    <td>{{s.name}}</td>
+    <td>{{s.gender}}</td>
+    <td>{{s.age}}</td>
+    <td>{{s.course}}</td>
+
+ </tr>
+</table>
+<br/>
+<button (click)=" getmorestudents()">get more student</button> -->
+
+
+
+  <h2>Grouping by example ngfor</h2> 
+  <ul *ngFor="let group of countrydetails">
+    <li>{{group.country}}</li>
+    <ul>
+        <li *ngFor="let person of group.people">
+            {{person.name}}
+        </li>
+    </ul>
+  </ul>

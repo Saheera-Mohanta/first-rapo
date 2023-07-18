@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,13 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  title = 'if else condition'
+  show: boolean = true;
 
-  color="red";
-  text='red'
-
-  public updateColor(){
-    this.color="blue"
-    this.text='blue'
+  public checkValue() {
+    this.show = false;
 
   }
+  cdata:any;
+  getdata(val:any){
+    this.cdata=val;
+  
+  }
+
+
 }

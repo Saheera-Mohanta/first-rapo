@@ -1,4 +1,23 @@
+<!-- <h1>{{ title }}</h1>
+<h1 *ngIf="show; then ifBlock  else elseBlock">
 
-<!--<h1 [style.color]="color">{{ text}}</h1>-->
-<div [style]="'color:' + color + ';'">{{ text }}</div>
-<button (click)="updateColor()">update</button>
+</h1>
+
+<ng-template #ifBlock>
+    <h1>if condition</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>else condition</h1>
+</ng-template>
+
+<button (click)="checkValue()">update </button> -->
+
+
+<h1>parent</h1>
+<!-- 
+parent component:<input type="text" #Pcomponent (keyup)="0"/>
+ -->
+
+ 
+value of child:{{ cdata}}
+ <app-home (childevent)="getdata($event)"></app-home>
