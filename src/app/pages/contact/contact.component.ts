@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,17 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  title = 'if else condition'
-  show: boolean = true;
+  // title = 'if else condition'
+  // show: boolean = true;
+  // public checkValue() {
+  //   this.show = false;
+  // }
+  // cdata:any;
+  // getdata(val:any){
+  //   this.cdata=val;
+  // }
 
-  public checkValue() {
-    this.show = false;
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
 
-  }
-  cdata:any;
-  getdata(val:any){
-    this.cdata=val;
-  
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
   }
 
 

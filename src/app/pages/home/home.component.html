@@ -32,6 +32,34 @@
       10.set tim out,set intervel,
           form-->
 
-          <h1>child</h1>
+          <!-- <h1>child</h1> -->
           <!-- value of child:{{pdata}} -->
-        value of child  <input type="text" #Ccomponent (keyup)="onchange(Ccomponent.value)"/>
+        <!-- value of child  <input type="text" #Ccomponent (keyup)="onchange(Ccomponent.value)"/> -->
+
+ <h1> login</h1>
+<div class="container">
+    <div class="row">
+        <div class="form_bg">
+            <form [formGroup]='signupForm' (ngSubmit)="PostData(signupForm)">
+
+                <div class="forrm-group">
+                    <input type="text" formControlName='fname' placeholder="your first name">
+                </div>
+                <div class="forrm-group">
+                    <input type="text" formControlName='lname' placeholder="your last name">
+                </div>
+                <div class="forrm-group">
+                    <input type="text" formControlName='Emailid' placeholder="your Emailid">
+                </div>
+                <div class="forrm-group">
+                    <input type="password" formControlName='userpassword' placeholder="your password">
+                </div>
+                 <input type="submit" value="PostData">  
+                          
+             </form>
+        </div>
+    </div>
+</div> 
+
+
+

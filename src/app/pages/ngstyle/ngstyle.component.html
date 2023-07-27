@@ -5,44 +5,75 @@
     </li>
   </ul> -->
 
-  <h2>using ngclassv as string</h2>
-  <p [ngClass]="[' one ',' two']">using ng class with sring example</p>
-  <div *ngFor="let user of users"[ngClass]="'three four'">
-    {{ user }}
-  </div>
+<h2>using ngclassv as string</h2>
+<p [ngClass]="[' one ',' two']">using ng class with sring example</p>
+<div *ngFor="let user of users" [ngClass]="'three four'">
+  {{ user }}
+</div>
 
-  <p [ngClass]="{'one':true, 'three': false}">Example using ng class  objet</p>
-  <div [ngClass]="getcssclass('mode')">
-    example using ngclass with component method
-  </div>
-
-
-  <!-- interpolution -->
-   <h2>Interpolution</h2>
-  <h4>Employee name: {{empfirstname+' '+emplastname}}</h4>
-  <h4>Employee age: {{a+b}}</h4>
-
-  <!-- property binding -->
-   <h2>property binding</h2>
-  <span [innerHTML]='title'></span>
-  first name:<span [innerHTML]='firstname'></span>
-  <img [src]="'images.jpg'" [height]="200">
+<p [ngClass]="{'one':true, 'three': false}">Example using ng class objet</p>
+<div [ngClass]="getcssclass('mode')">
+  example using ngclass with component method
+</div>
 
 
-  <!-- attribute binding -->
-  <h2>attribute binding</h2>
-  <table>
-    <tr>
-        <td>Student Details</td>
-    </tr>
-    <tr>
-        <td>name</td>
-        <td>roll</td>
-        <td>course</td>
-    </tr>
-    <tr>
-        <td>saheera</td>
-        <td>04</td>
-        <td>MCA</td>
-    </tr>
-  </table>
+<!-- interpolution -->
+<h2>Interpolution</h2>
+<h4>Employee name: {{empfirstname+' '+emplastname}}</h4>
+<h4>Employee age: {{a+b}}</h4>
+
+<!-- property binding -->
+<h2>property binding</h2>
+<span [innerHTML]='title'></span>
+first name:<span [innerHTML]='firstname'></span>
+<img [src]="'images.jpg'" [height]="200">
+
+
+<!-- attribute binding -->
+<h2>attribute binding</h2>
+<table [attr.border]="bdr" height="100" width="200">
+  <tr>
+    <td [attr.colspan]="cols">Student Details</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>roll</td>
+    <td>course</td>
+  </tr>
+  <tr>
+    <td>saheera</td>
+    <td>04</td>
+    <td>MCA</td>
+  </tr>
+</table>
+
+<!-- Event binding -->
+<h2>Event binding</h2>
+<button (click)="valueshow()">click here</button><br>
+<button (click)="showdata()">click here</button>
+
+<!-- two way data binding -->
+
+<h2>Two way data binding</h2>
+<!-- Enter your name:<input [value]='data' (input)='data=$event.traget.value'>
+   your name:{{data}} -->
+<input [(ngModel)]='data1'>
+Enter value:{{data1}}
+
+<!-- pipe -->
+
+<h2>pipe</h2>
+<table [attr.border]="bdr" height="100" width="400">
+  <tr>
+    <th>Emp code</th>
+    <th>Emp name</th>
+    <th>Salary</th>
+    <th>Date of Birth</th>
+  </tr>
+  <tr *ngFor="let employees of employees">
+    <td>{{employees.code}}</td>
+    <td>{{employees.name| uppercase}}</td>
+    <td>{{employees.salary}}</td>
+    <td>{{employees.dob}}</td>
+  </tr>
+</table>

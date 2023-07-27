@@ -60,7 +60,7 @@
 
 
 
-  <h2>Grouping by example ngfor</h2> 
+  <!-- <h2>Grouping by example ngfor</h2> 
   <ul *ngFor="let group of countrydetails">
     <li>{{group.country}}</li>
     <ul>
@@ -68,4 +68,37 @@
             {{person.name}}
         </li>
     </ul>
-  </ul>
+  </ul> -->
+
+  
+  <!-- <div *ngIf="condition; else  elseBlock">true</div>
+  <ng-template #elseBlock>false</ng-template> -->
+
+
+  <table style="width: 100%;">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>BASIC</th>
+            <th>STANDARD</th>
+            <th>PREMIUM</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.name }}</td>
+        <td>
+          <span *ngIf="item.available; else notAvailable">✔</span>
+          <ng-template #notAvailable>✘</ng-template>
+        </td>
+          <td>
+            <span *ngIf="item.available; else notAvailable">✔</span>
+            <ng-template #notAvailable>✘</ng-template>
+          </td>
+          <td>
+            <span *ngIf="item.available; else notAvailable">✔</span>
+            <ng-template #notAvailable>✘</ng-template>
+          </td>
+      </tr>
+    </tbody>
+  </table>

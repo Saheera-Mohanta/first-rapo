@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,13 @@ import { AnimationComponent } from './pages/animation/animation.component';
 import { BasictsComponent } from './pages/basicts/basicts.component';
 import { IfelseComponent } from './pages/ifelse/ifelse.component';
 import { NgstyleComponent } from './pages/ngstyle/ngstyle.component';
-import { FormComponent } from './pages/form/form.component';
+import { PipesComponent } from './pages/pipes/pipes.component';
+import { MypipePipe } from './mypipe.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+
+
+
 
 
 
@@ -29,17 +36,24 @@ import { FormComponent } from './pages/form/form.component';
     LoginComponent,
     Login1Component,
     AnimationComponent,
-   
+
     BasictsComponent,
-         IfelseComponent,
-         NgstyleComponent,
-         FormComponent,
-         
+    IfelseComponent,
+    NgstyleComponent,
+    PipesComponent,
+    MypipePipe,
+    NavbarComponent,
   
+
+
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

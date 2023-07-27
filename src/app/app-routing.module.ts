@@ -11,7 +11,9 @@ import { AnimationComponent } from './pages/animation/animation.component';
 import { BasictsComponent } from './pages/basicts/basicts.component';
 import { IfelseComponent } from './pages/ifelse/ifelse.component';
 import { NgstyleComponent } from './pages/ngstyle/ngstyle.component';
-import { FormComponent } from './pages/form/form.component';
+import { PipesComponent } from './pages/pipes/pipes.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+
 
 const routes: Routes = [
   {
@@ -48,9 +50,11 @@ const routes: Routes = [
     path:'ngstyle',component:NgstyleComponent
   },
   {
-    path:'form',component:FormComponent
+    path:'pipes',component:PipesComponent
+  },
+  {
+    path:'navbar',component:NavbarComponent
   }
-    
 ];
 
 

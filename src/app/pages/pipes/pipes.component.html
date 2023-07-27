@@ -1,0 +1,116 @@
+<!-- pipes -->
+<!-- <h2>pipe</h2>
+<table [attr.border]="bdr" height="100" width="400">
+  <tr>
+    <th>Emp code</th>
+    <th>Emp name</th>
+    <th>Salary</th>
+    <th>Date of Birth</th>
+  </tr>
+  <tr *ngFor="let employees of employees">
+    <td>{{employees.code}}</td>
+    <td>{{employees.name| uppercase}}</td>
+    <td>{{employees.salary}}</td>
+    <td>{{employees.dob}}</td>
+  </tr>
+</table> -->
+
+<!-- parameterize pipes -->
+<!-- <h2> parameterize pipes</h2>
+<div>
+  {{dob}}<br>
+  medium:{{dob|date:"medium"| uppercase}}<br>
+  Specific formate : {{dob|date:"dd/MM/yyyy"}}<br>
+  medium time : {{dob|date:"mediumTime"}}<br>
+  Salary :-{{salary|currency:"USD":true}}
+
+</div> -->
+
+<!-- chaining pipes  -->
+<!-- <h2>chaining pipes </h2>
+fulldate : {{dob|date:"fullDate" | uppercase}} -->
+
+<!-- pipes with string -->
+<!-- <h2>pipes with string</h2>
+<h4>{{name|uppercase}}-{{postion|lowercase}}</h4>
+<h4>{{work|titlecase}}</h4>
+<h3>slice example:-</h3>
+<h4>{{work|slice:5}}</h4>
+<h4>{{work|slice:5:8}}</h4> -->
+
+<!-- date,percent,decimal,currency -->
+<!-- <h2>date,percent,decimal,currency</h2>
+<h3>date--</h3>
+<h5>{{currentdate}}</h5>
+<h5>{{currentdate|date:'shortDate'}}</h5>
+<h5>{{currentdate|date:'longDate'}}</h5>
+<h5>{{currentdate|date:'fullDate'}}</h5>
+
+<h3>percent--</h3>
+<h5>{{mynumber}}</h5>
+<h5>{{mynumber|percent}}</h5>
+<h5>{{mynumber|percent:'2.4-8'}}</h5>
+
+<h3>decimal--</h3>
+<h5>{{mynumber}}</h5>
+<h5>{{mynumber|number}}</h5>
+<h5>{{mynumber|number:'2.4-8'}}</h5>
+
+<h3>currency--</h3>
+<h5>{{mynumber}}</h5>
+<h5>{{mynumber|currency}}</h5>
+<h5>{{mynumber|currency:'INR':'code'}}</h5>
+
+ json pipe
+<h2>json pipe</h2>
+<div>
+  {{employees1|json}}<br>
+  {{employees1|slice:1:3|json}}
+</div> -->
+
+
+<!-- custom pipe
+<h2>custom pipe</h2>
+<table [attr.border]="bdr" height="100" width="400">
+  <tr *ngFor="let employees of employees2">
+    <td>{{employees.code}}</td>
+    <td>{{employees.name|mypipe:employees.gender}}</td>
+    <td>{{employees.gender}}</td>
+    <td>{{employees.salary}}</td>
+  </tr>
+
+</table> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <div class="tab">
+    
+     <table style="width: 80%;">
+    <thead>
+        <tr>
+            <th>PRICING TABLE</th>
+            <th >BASIC</th>
+            <th>STANDARD</th>
+            <th>PREMIUM</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let element of value">
+        <td>{{element.name}}</td>
+    <td><div [innerHTML]="element.isBasic|mypipe"></div></td>
+    <td><div [innerHTML]="element.isStandard|mypipe"></div></td>
+    <td><div [innerHTML]="element.isPremium|mypipe"></div></td>
+   
+  </tr>
+  </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+    
+
+

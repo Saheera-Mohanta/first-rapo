@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class IfelseComponent {
 
-  // isvalid:boolean=true;
-  // changevalue(vaild:any){
-  //   this.isvalid=vaild;
-  // }
+   isvalid:boolean=true;
+ changevalue(vaild:any){
+ this.isvalid=vaild;
+  }
 
   // title='for loop';
   // Students:any[]=[
@@ -143,6 +143,17 @@ export class IfelseComponent {
       ]
     },
   ];
-  
 
+
+
+ 
+
+
+  data: any[] = [
+    { name: 'rame', available: true },
+    { name: 'pura', available: false },
+
+  ];
 }
+
+

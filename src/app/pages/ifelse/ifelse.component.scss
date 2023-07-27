@@ -1,0 +1,9 @@
+table,tr,th,td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: rgb(238, 230, 230);
+}
+
