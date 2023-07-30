@@ -1,6 +1,5 @@
-import { preserveWhitespacesDefault } from '@angular/compiler';
-import { Component, EventEmitter } from '@angular/core';
-import { FormGroup,FormControl,FormBuilder,NgForm } from '@angular/forms';
+
+import { Component,  } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,26 +16,28 @@ export class HomeComponent {
  // onchange(val:any){
     // console.log(val);
    // this.childevent.emit(val);
-   signupForm: FormGroup;
-   FirstName:string="";
-   LastName:string="";
-   Email:string="";
-   Password:string="";
 
-   constructor(private frmbuilder:FormBuilder){
-    this.signupForm=frmbuilder.group({
-      fname:new FormControl(),
-      lname:new FormControl(),
-      Emailid:new FormControl(),
-      userpassword:new FormControl()
+   signupUsers: any[]=[];
+   signupObj:any={
+    userName:'',
+    email:'',
+    password:''
+   };
 
-    });
+   loginObj:any={
+    userName:'',
+    password:''
+   };
+
+   constructor(){
 
    }
-   PostData(signupForm:any){
-     console.log(signupForm.controls)
+
+   onSignUp(){
+    this. signupUsers.push(this.signupObj)
    }
 
+   
 
   }
 

@@ -52,8 +52,7 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+ FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

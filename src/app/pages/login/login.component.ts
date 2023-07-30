@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AbstractControl, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  
 
+  
 }
