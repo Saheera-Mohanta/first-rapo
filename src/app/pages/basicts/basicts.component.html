@@ -20,14 +20,54 @@
 
      
 
-     <div class="row">
-        <div class="column" style="background-color:#aaa;">
-          <h2>Column 1</h2>
-          <p>Some text..</p>
-        </div>
-        <div class="column" style="background-color:#bbb;">
-          <h2>Column 2</h2>
-          <p>Some text..</p>
-        </div>
-      </div>
+     <div class="container-fluid">
+      <h1>Bootcamp Enrollment Form</h1>
+      <form #userForm="ngForm">
+          {{ userForm.value | json}}
       
+          <div class="from-group">
+              <label>Name</label>
+              <input type="text" class="form-control" name="userName" ngModel>
+          </div>
+  
+          <div class="from-group">
+              <label>Email</label>
+              <input type="email" class="form-control" name="email" ngModel>
+          </div>
+  
+          <div class="from-group">
+              <label>Phone</label>
+              <input type="tel" class="form-control" name="phone" ngModel>
+          </div>
+  
+          <div class="from-group">
+              <select class="custom-select" name="select" ngModeln>
+                  <option selected >I am intrested</option>
+                  <option *ngFor="let topic of topics" >{{topic}}</option>
+              </select>
+          </div>
+  
+          <div class="mb3">
+              <label>Time preference</label>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" ngModel name="timePrefrance" value="morning">
+                  <label class="form-check-label">Morning (9AM - 12AM)</label>
+              </div>
+  
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" ngModel name="timePrefrance" value="evening">
+                  <label class="form-check-label">Evening (5PM -8AM)</label>
+              </div>
+  
+              <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" name="checkbox" ngModel >
+                  <label class="form-check-label">
+                Send me promotional offers
+                  </label>
+                </div>
+                
+                <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+      </form>
+  </div>
+  

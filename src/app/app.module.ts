@@ -19,6 +19,10 @@ import { PipesComponent } from './pages/pipes/pipes.component';
 import { MypipePipe } from './mypipe.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './pages/navbar/navbar.component';
+import { SignupformComponent } from './pages/signupform/signupform.component';
+import { TrackvalidformComponent } from './pages/trackvalidform/trackvalidform.component';
+
+
 
 
 
@@ -43,6 +47,9 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
     PipesComponent,
     MypipePipe,
     NavbarComponent,
+    SignupformComponent,
+    TrackvalidformComponent,
+
   
 
 

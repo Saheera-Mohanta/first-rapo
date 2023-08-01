@@ -32,9 +32,10 @@ export class BasictsComponent {
     this.color="yellow"
     this.text='yellow'
     this.bgColor="red"
+   }
     
-
-  }
+    topics=['angular','react','vue'];
+  
   
 
 }
