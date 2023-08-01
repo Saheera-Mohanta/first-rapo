@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Users } from './pages/users';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +10,17 @@ import { Users } from './pages/users';
 export class EnrollmentService {
 
  
-    _url= '';
+    _url= 'http://localhost:3000/enroll';
     constructor(private _http:  HttpClient )
    { }
 
-   enroll(uer: Users){
-   return this. _http.post<any>(this._url, Users);
+   enroll(users: Users){
+   return this. _http.post<any>(this._url, Users)
+  .pipe(catchError(this.errorHandler));
+           
 
+   }
+   errorHandler(error: HttpErrorResponse){
+    return throwError(error);
    }
 }

@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { SignupformComponent } from './pages/signupform/signupform.component';
 import { TrackvalidformComponent } from './pages/trackvalidform/trackvalidform.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -59,7 +60,10 @@ import { TrackvalidformComponent } from './pages/trackvalidform/trackvalidform.c
   imports: [
     BrowserModule,
     AppRoutingModule,
- FormsModule,ReactiveFormsModule
+ FormsModule,
+ ReactiveFormsModule,
+ HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,9 +12,11 @@ export class TrackvalidformComponent {
 
   topics=['angular','react','vue'];
   topicHasError=true;
+  submitted=false;
+  errorMsg='';
 
   userModel = new Users('','saheerr@.com',9768222866,'default','morning',true);
-  constructor(private _enrollmentService: EnrollmentService ){}
+  constructor(private enrollmentService: EnrollmentService ){}
   validateTopic(value:any){
     if (value === 'default'){
       this.topicHasError=true;
@@ -24,11 +26,12 @@ export class TrackvalidformComponent {
   }
 
   onSubmit(){
-    this._enrollmentService.enroll(this.userModel)
-      .subscribe(
-        data => console.log('Success',data),
-        error => console.error('Error', error)
-        )
+    this.submitted =true;
+    this.enrollmentService.enroll(this.userModel)
+      .subscribe({
+        next:data => console.log('Success!',data),
+        error:error => this.errorMsg =error.statusText
+      } )
     
   }
 
